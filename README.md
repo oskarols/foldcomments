@@ -18,7 +18,6 @@ Toggle Comments Folding: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
 
 
 #### Commands
-The following commands have been installed
 
 * `Toggle Fold Comments`
 * `Fold Comments`
