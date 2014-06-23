@@ -1,0 +1,14 @@
+[
+    {
+        "caption": "Fold Comments",
+        "command": "fold_comments"
+    },
+    {
+        "caption": "Unfold Comments",
+        "command": "unfold_comments"
+    },
+    {
+        "caption": "Toggle Fold Comments",
+        "command": "toggle_fold_comments"
+    }
+]

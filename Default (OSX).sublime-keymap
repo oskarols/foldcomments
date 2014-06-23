@@ -1,0 +1,3 @@
+[
+	{ "keys": ["cmd+shift+c"], "command": "toggle_fold_comments" }
+]

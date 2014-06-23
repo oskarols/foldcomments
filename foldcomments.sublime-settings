@@ -1,0 +1,24 @@
+{
+	// Adjacent single- and block comments
+	// get turned into a single fold
+	// 
+	// Example:
+	// 
+	// # Foo bar baz
+	// # baz bar foo
+	// 
+	// Would get turned into:
+	// (..)
+	// 
+	// Instead of:
+	// (..)
+	// (..)
+	"concatenate_adjacent_comments": true,
+
+	// Includes "inline" comments, like so:
+	// 
+	// function foobar(baz) {
+	// 	return baz * 2; // this is an inline comment <--
+	// }
+	"fold_single_line_comments": true
+}
