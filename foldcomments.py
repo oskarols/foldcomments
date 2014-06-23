@@ -81,7 +81,7 @@ class CommentsMixin:
             //
             @function foobar() { <---
 
-            What we do to fix this is nt to use the boundaries
+            What we do to fix this is not to use the boundaries
             for the regions, but instead use the last line
             for the region —- which seems to have the correct end
             point set.
