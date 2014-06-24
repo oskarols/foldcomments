@@ -83,7 +83,7 @@ class CommentsMixin:
 
             What we do to fix this is not to use the boundaries
             for the regions, but instead use the last line
-            for the region —- which seems to have the correct end
+            for the region - which seems to have the correct end
             point set.
             """
             lines = view.lines(region)

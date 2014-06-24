@@ -24,7 +24,7 @@
                                 "command": "open_file",
                                 "args": {"file": "${packages}/User/foldcomments.sublime-settings"},
                                 "caption": "FoldComments Settings – User"
-                            },
+                            }
                         ]
                     }
                 ]
