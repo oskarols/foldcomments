@@ -140,12 +140,18 @@ class ToggleFoldCommentsCommand(sublime_plugin.TextCommand, CommentsMixin):
         view = self.view
         comments = self.comment_regions()
 
+        def is_folded(comments):
+            return view.unfold(comments[0]) # False if /already folded/
+
         if not comments:
             return
 
         comments = self.post_process_comments(comments)
 
-        if view.fold(comments[0]):  # False if /already folded/
+        if not comments:
+            return
+
+        if not is_folded(comments):
             view.fold(comments)
         else:
             view.unfold(comments)
@@ -161,6 +167,10 @@ class FoldCommentsCommand(sublime_plugin.TextCommand, CommentsMixin):
             return
 
         comments = self.post_process_comments(comments)
+
+        if not comments:
+            return
+        
         view.fold(comments)
 
 
