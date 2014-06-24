@@ -1,7 +1,7 @@
-foldcomments
+Fold Comments
 ============
 
-Sublime Text 3 plugin for folding (hiding) comments
+Sublime Text 2/3 plugin for folding (hiding) comments
 
 ![Toggle Comment Folding](https://raw.github.com/oskarols/foldcomments/master/foldcomments.gif)
 
@@ -19,6 +19,6 @@ Toggle Comments Folding: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
 
 #### Commands
 
-* `Toggle Fold Comments`
+* `Toggle Folding Comments`
 * `Fold Comments`
 * `Unfold Comments`
