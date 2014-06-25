@@ -7,7 +7,7 @@ Sublime Text 2/3 plugin for folding (hiding) comments
 
 ## Installation
 
-You can install via (Sublime Package Manager)[https://sublime.wbond.net/] where the plugin is called "Fold Comments"
+You can install via [Sublime Package Manager](https://sublime.wbond.net/) where the plugin is called "Fold Comments"
 
 
 ## Usage
