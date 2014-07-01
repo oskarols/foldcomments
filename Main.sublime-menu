@@ -17,7 +17,7 @@
                         [
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/FoldComments/foldcomments.sublime-settings"},
+                                "args": {"file": "${packages}/Fold Comments/foldcomments.sublime-settings"},
                                 "caption": "FoldComments Settings – Default"
                             },
                             {
@@ -29,7 +29,7 @@
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/FoldComments/Default (Windows).sublime-keymap",
+                                    "file": "${packages}/Fold Comments/Default (Windows).sublime-keymap",
                                     "platform": "Windows"
                                 },
                                 "caption": "Key Bindings – Default"
@@ -37,7 +37,7 @@
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/FoldComments/Default (OSX).sublime-keymap",
+                                    "file": "${packages}/Fold Comments/Default (OSX).sublime-keymap",
                                     "platform": "OSX"
                                 },
                                 "caption": "Key Bindings – Default"
@@ -45,7 +45,7 @@
                             {
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/FoldComments/Default (Linux).sublime-keymap",
+                                    "file": "${packages}/Fold Comments/Default (Linux).sublime-keymap",
                                     "platform": "Linux"
                                 },
                                 "caption": "Key Bindings – Default"
