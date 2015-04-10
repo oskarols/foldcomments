@@ -8,9 +8,6 @@ try:
 except ImportError: # will be 3.x series
     pass
 
-settings = load_settings("foldcomments.sublime-settings")
-
-
 def previous_and_current(iterable, *iterables):
     """
     Includes the previous value of iterable in iteration
@@ -109,6 +106,7 @@ class CommentNodes:
 
     def __init__(self, view):
         self.comments = None # collection of Region objects
+        self.settings = load_settings("foldcomments.sublime-settings")
         self.view = view
         self.find_comments()
         self.apply_settings()
@@ -119,10 +117,10 @@ class CommentNodes:
         ]
 
     def apply_settings(self):
-        if not settings.get('fold_single_line_comments'):
+        if not self.settings.get('fold_single_line_comments'):
             self.remove_single_line_comments()
 
-        if settings.get('concatenate_adjacent_comments'):
+        if self.settings.get('concatenate_adjacent_comments'):
             self.concatenate_adjacent_comments()
 
     def remove_single_line_comments(self):
