@@ -20,5 +20,20 @@
 	// function foobar(baz) {
 	// 	return baz * 2; // this is an inline comment <--
 	// }
-	"fold_single_line_comments": true
+	"fold_single_line_comments": true,
+
+	// Includes "multiline" comments, like so:
+	/*
+	function foobar(baz) {
+	return baz * 2;
+	} */
+	"fold_multi_line_comments": true,
+
+	// Includes "docblock" comments, like so:
+	/**
+	 * Foobar function
+	 * @param {Number} baz
+	 * @return {Number} Foobar number
+	 */
+	"fold_doc_block_comments": true
 }
