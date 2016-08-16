@@ -25,6 +25,10 @@ def previous_and_current(iterable, *iterables):
 def is_comment_multi_line(view, region):
     return len(view.lines(region)) > 1
 
+def is_comment_doc_block(view, region):
+    region_str = view.substr(region)
+    return region_str.rfind('/**') != -1
+
 def normalize_comment(view, region):
     if is_comment_multi_line(view, region):
         return normalize_multiline_comment(view, region)
@@ -120,11 +124,23 @@ class CommentNodes:
         if not self.settings.get('fold_single_line_comments'):
             self.remove_single_line_comments()
 
+        if not self.settings.get('fold_multi_line_comments'):
+            self.remove_multi_line_comments()
+
+        if not self.settings.get('fold_doc_block_comments'):
+            self.remove_doc_block_comments()
+
         if self.settings.get('concatenate_adjacent_comments'):
             self.concatenate_adjacent_comments()
 
     def remove_single_line_comments(self):
-        self.comments = [c for c in self.comments if is_comment_multi_line(self.view, c)]
+        self.comments = [c for c in self.comments if is_comment_multi_line(self.view, c) or is_comment_doc_block(self.view, c)]
+
+    def remove_multi_line_comments(self):
+        self.comments = [c for c in self.comments if not is_comment_multi_line(self.view, c) or is_comment_doc_block(self.view, c)]
+
+    def remove_doc_block_comments(self):
+        self.comments = [c for c in self.comments if not is_comment_doc_block(self.view, c)]
 
     def concatenate_adjacent_comments(self):
         """
